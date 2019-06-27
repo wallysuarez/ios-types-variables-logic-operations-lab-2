@@ -20,12 +20,15 @@ var grade1 = 7.0
 var grade2 = 9.0
 var grade3 = 5.0
 
-var yourGrade: Double = 2.0
-if  yourGrade < 7.0 {
-print("below average")
-} else if yourGrade > 7.0 {
-print ("above average")
+var yourGrade = 2.0
+var average = (grade1 + grade2 + grade3)/3
+
+if yourGrade < average {
+    print("below average")
+} else if yourGrade > average {
+    print ("above average")
 }
+
 ```
 
 ***
@@ -36,10 +39,10 @@ You are given a number. Print even if the number is even or odd otherwise.
 ```swift
 let number = 2
 
-if number%2 == 0 {
-print("even")
-} else if number%2 == 1 {
-print("odd")
+if number % 2 == 0 {
+    print("even")
+} else if number % 2 == 1 {
+    print("odd")
 }
 ```
  
@@ -53,12 +56,10 @@ You are given two numbers `a` and `b`. Print `"divisible"` if `a` is divisible b
 var a = 12
 var b = 3
 
-var a = 12
-var b = 3
-if a%b == 0 {
-print("divisible")
-} else if a%b != 0 {
-print("not divisible")
+if a % b == 0 {
+    print("divisible")
+} else if a % b != 0 {
+    print("not divisible")
 }
 ```
 
@@ -73,9 +74,9 @@ var b = 3
 var c = 2
 
 if a == b || a == c || b == c {
-print("At least two variables have the same value")
+    print("At least two variables have the same value")
 } else if a != b || a != c || b != c {
-print("All the values are different")
+    print("All the values are different")
 }
 ```
 
@@ -89,13 +90,13 @@ var baconAge = 6 // the bacon is 6 days old
 var eggsAge = 12 // eggs are 12 days old
 
 if baconAge <= 7 && eggsAge <= 21 {
-print("you can cook bacon and eggs")
+    print("you can cook bacon and eggs")
 } else if baconAge > 7 && eggsAge > 21 {
-print("throw out bacon and eggs")
+    print("throw out bacon and eggs")
 } else if baconAge > 7 {
-print("throw out bacon")
+    print("throw out bacon")
 } else if eggsAge > 21 {
-print("throw out eggs")
+    print("throw out eggs")
 }
 ```
 
@@ -110,13 +111,12 @@ let year = 2014
 
 if year % 4 == 0 {
 if year % 100 == 0 && year % 400 != 0 {
-print("Not a leap year!")
+    print("Not a leap year!")
 } else {
-print("Leap year!")
+    print("Leap year!")
 }
 } else {
-print(year, terminator: "-")
-print("Not a leap year!")
+    print("Not a leap year!")
 }
 ```
 
@@ -128,7 +128,12 @@ If you use `random()` it will give you a random number within a specified range.
 ```swift
 let randomNum = Int.random(in: 0...100)
 
-// your code here
+let coinFlip = Int.random(in: 0...1)
+if coinFlip % 2 == 0 {
+    print("tails")
+} else {
+    print("heads")
+}
 ```
 
 Hint: use an if/else block along with the `%` operator
@@ -144,7 +149,11 @@ var b = 6
 var c = 3
 var d = 4
 
-// your code here
+let smallest = min(a, b, c, d)
+    switch smallest {
+        default:
+            print(smallest)
+}
 ```
 
 ***
